@@ -17,7 +17,7 @@ def get_weather_data(city):
 
 @app.route('/', methods=['GET', 'POST'])
 def index_get():
-    cities = ['Melbourne', 'Sydney', 'Brisbane', 'Darwin', 'Perth', 'Hobart', 'Canberra']
+    cities = ['Melbourne', 'Sydney', 'Brisbane', 'Darwin', 'Perth', 'Hobart', 'Canberra', 'Newcastle']
 
     weather_data = []
 

@@ -20,6 +20,13 @@ class FlaskAppTests(unittest.TestCase):
         expected_response = get_weather_data('Melbourne')
         self.assertEqual(13, len(expected_response))
 
+    def test_get_city_weather_sydney(self):
+        # test to check if receiving all weather data for the city
+        print(self._testMethodName)
+        print('Testing for Melbourne')
+        expected_response = get_weather_data('Sydney')
+        self.assertEqual(13, len(expected_response))
+
 
 if __name__ == '__main__':
     unittest.main()
