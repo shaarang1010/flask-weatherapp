@@ -35,4 +35,4 @@ def index_get():
     return render_template('weather.html', weather_data=weather_data)
 
 if __name__=="__main__":
-    app.run()
+    app.run(threaded=True, port=5000)
