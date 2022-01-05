@@ -2,6 +2,7 @@ import requests
 import os
 from flask import Flask, render_template, redirect, url_for, flash
 from dotenv import load_dotenv
+from flask_api import status
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -32,7 +33,7 @@ def index_get():
         }
         weather_data.append(weather)
 
-    return render_template('weather.html', weather_data=weather_data)
+    return render_template('weather.html', weather_data=weather_data),  status.HTTP_200_OK
 
 if __name__=="__main__":
     app.run(threaded=True, port=5000)
